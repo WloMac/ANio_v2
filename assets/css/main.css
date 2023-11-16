@@ -22,6 +22,11 @@
 	--bright1: rgba(244, 212, 178, 0.750);
 	--panelColor1: var(--secondaryColor);
 
+	--spaceXS: 8px;
+	--spaceS: 16px;
+	--spaceM: 32px;
+	--spaceL: 64px;
+	--spaceXL: 128px;
 }
 
 html, body, div, span, applet, object,
@@ -53,6 +58,11 @@ body {
 ol, ul {
 	list-style: none;
 }
+ul.no-bullets {
+	padding: var(--spaceS);
+	list-style-type: none; 	
+	min-height: 200px;
+  }
 
 blockquote, q {
 	quotes: none;
