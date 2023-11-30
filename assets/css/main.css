@@ -8,10 +8,10 @@
 */
 :root{
 	--bodyColor: rgb(105, 135, 100);
-	--primaryColor:rgba(183, 235, 194, 0.800);
-	--secondaryColor: rgba(140, 185, 150, 0.800);
-	--thirdColor: rgba(155, 185, 160, 0.800);
-	--fourthColor: rgba(50, 115, 60, 0.800);
+	--primaryColor:rgba(183, 235, 194, 0.600);
+	--secondaryColor: rgba(140, 185, 150, 0.600);
+	--thirdColor: rgba(155, 185, 160, 0.600);
+	--fourthColor: rgba(50, 115, 60, 0.600);
 	--fifthColor: rgb(10, 50, 20);
 	--gradient1:rgba(44, 58, 28, 0.250);
 	--gradient2:rgba(43, 68, 43, 0.250);
@@ -2262,9 +2262,9 @@ input, select, textarea {
 			}
 
 			.panel > *.color4 {
-				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+				background-image: url("../../images/overlay.png"), linear-gradient(45deg, var(--gradient1) 25%, var(--gradient2) 50%, var(--gradient3));
 				background-size: 128px 128px, auto;
-				background-color: #353865;
+				background-color: var(--primaryColor);
 			}
 
 			.panel > *.color1-alt {
@@ -2286,9 +2286,9 @@ input, select, textarea {
 			}
 
 			.panel > *.color4-alt {
-				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+				background-image: url("../../images/overlay.png"), linear-gradient(45deg, var(--gradient1) 25%, var(--gradient2) 50%, var(--gradient3));
 				background-size: 128px 128px, auto;
-				background-color: #323459;
+				background-color: var(--primaryColor);
 			}
 
 		.panel > .intro {
@@ -2803,9 +2803,9 @@ input, select, textarea {
 		}
 
 		.panel.color4-alt {
-			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+			background-image: url("../../images/overlay.png"), linear-gradient(45deg, var(--gradient1) 25%, var(--gradient2) 50%, var(--gradient3));
 			background-size: 128px 128px, auto;
-			background-color: #323459;
+			background-color: var(--primaryColor);
 		}
 
 	@media screen and (max-width: 736px) {
@@ -2838,9 +2838,9 @@ input, select, textarea {
 			}
 
 			.panel > *.color4 {
-				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+				background-image: url("../../images/overlay.png"), linear-gradient(45deg, var(--gradient1) 25%, var(--gradient2) 50%, var(--gradient3));
 				background-size: 128px 128px, auto;
-				background-color: #353865;
+				background-color: var(--primaryColor);
 			}
 
 			.panel > *.color1-alt {
@@ -2862,9 +2862,9 @@ input, select, textarea {
 			}
 
 			.panel > *.color4-alt {
-				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+				background-image: url("../../images/overlay.png"), linear-gradient(45deg, var(--gradient1) 25%, var(--gradient2) 50%, var(--gradient3));
 				background-size: 128px 128px, auto;
-				background-color: #323459;
+				background-color: var(--primaryColor);
 			}
 
 			.panel > .intro {
@@ -3289,9 +3289,9 @@ input, select, textarea {
 			}
 
 			.panel.color4-alt {
-				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+				background-image: url("../../images/overlay.png"), linear-gradient(45deg, var(--gradient1) 25%, var(--gradient2) 50%, var(--gradient3));
 				background-size: 128px 128px, auto;
-				background-color: #323459;
+				background-color: var(--primaryColor);
 			}
 
 	}
