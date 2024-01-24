@@ -204,18 +204,19 @@
 								</div>
 								<div class="inner columns divided">
 									<div class="span-3-25">
-										<form method="post" action="#">
+										<form id="contact-form" method="post" action="#">
+											<input type="hidden" name="contact_number">
 											<div class="fields">
 												<div class="field half">
-													<label for="name">Name</label>
-													<input type="text" name="name" id="name" />
+													<label for="name">Imię</label>
+													<input type="text" name="user_name" id="name" />
 												</div>
 												<div class="field half">
 													<label for="email">Email</label>
-													<input type="email" name="email" id="email" />
+													<input type="email" name="user_email" id="email" />
 												</div>
 												<div class="field">
-													<label for="message">Message</label>
+													<label for="message">Wiadomość</label>
 													<textarea name="message" id="message" rows="4"></textarea>
 												</div>
 											</div>
@@ -245,6 +246,29 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('FhlLJ06ZMP2-MuzuI');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
 	</body>
 </html>
